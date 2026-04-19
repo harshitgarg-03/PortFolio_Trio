@@ -19,12 +19,12 @@ const App: React.FC = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-    setActiveTab(id);
-  }
-};
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setActiveTab(id);
+    }
+  };
 
   const team = [
     {
@@ -133,6 +133,7 @@ const App: React.FC = () => {
           </div>
 
           <motion.button
+            onClick={() => window.open("https://navo-rise.vercel.app", "_blank")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="hidden md:block px-6 py-2.5 bg-blue-600 rounded-full text-xs font-black uppercase tracking-widest hover:bg-blue-500 transition-colors shadow-lg shadow-blue-600/20"
