@@ -124,7 +124,7 @@ const App: React.FC = () => {
             {['home', 'team', 'work'].map((item) => (
               <button
                 key={item}
-                onClick={() => setActiveTab(item)}
+                onClick={() => scrollToSection(item)}
                 className={`text-xs font-bold uppercase tracking-widest transition-all ${activeTab === item ? 'text-blue-400' : 'text-slate-400 hover:text-white'}`}
               >
                 {item}
@@ -143,7 +143,7 @@ const App: React.FC = () => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative pt-48 pb-24 px-6">
+      <header id="home" className="relative pt-48 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -176,7 +176,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Team Showcase */}
-      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-blue-600/5">
+      <section id="team" className="py-24 px-6 bg-gradient-to-b from-transparent to-blue-600/5">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
@@ -236,7 +236,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Projects Scroller */}
-      <section className="py-32 px-6">
+      <section id="work" className="py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
